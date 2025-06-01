@@ -46,6 +46,9 @@ public class VentanaPrincipalController {
 
     @FXML
     private ComboBox<String> comboTipoHeroe;
+    
+    @FXML
+    private Button btnEjercito;
 
     @FXML
     private ImageView imageViewBestia;
@@ -352,6 +355,26 @@ public class VentanaPrincipalController {
         } catch (Exception ex) {
             System.err.println("❌ Error al refrescar: " + ex.getMessage());
             ex.printStackTrace();
+        }
+    }
+
+    @FXML
+    void OncambioInterfaz(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/BatallaEjercitos.fxml"));
+            Parent root = loader.load();
+            
+            // Obtener la ventana actual desde el botón u otro componente
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Batalla entre Héroes y Bestias");
+            stage.show();
+
+            System.out.println("Interfaz cambiada a BatallaEjercito.fxml");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

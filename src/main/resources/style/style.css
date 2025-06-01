@@ -47,22 +47,6 @@
     -fx-background-color: #ffa000;
     -fx-cursor: hand;
 }
-
-/* TextField y ComboBox 
-.text-field {
-    -fx-border-color: #6d4c41;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-padding: 6; 
-}
-
-.combo-box-base {
-    -fx-border-color: #6d4c41;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-padding: 6;
-}
-*/
 /* TextField  */
 .text-field {
     -fx-background-color: #000000; /* Fondo negro */
@@ -143,3 +127,21 @@ ImageView {
     /* Estas propiedades no existen en CSS para JavaFX pero el fitHeight y fitWidth ya lo tenés en FXML */
 }
 
+.btn-cambioInterfaz {
+    -fx-background-color: #ff33cc;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, #ff33cc, 10, 0.7, 0, 0);
+    -fx-border-color: #ff00ff;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+}
+
+.btn-cambioInterfaz:hover {
+    -fx-background-color: #ff66d9;
+    -fx-cursor: hand;
+}

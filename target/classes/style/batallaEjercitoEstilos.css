@@ -1,0 +1,144 @@
+/* === Fondo general del AnchorPane === */
+.fondo-batalla {
+    -fx-background-image: url("../images/59.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-padding: 20;
+    -fx-border-color: #444444;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+}
+
+/* === Título principal === */
+.label.titulo-batalla {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff1744;
+    -fx-effect: dropshadow(gaussian, #000000, 3, 0.6, 1, 1);
+    -fx-font-family: "Consolas", "Monospaced";
+}
+
+/* === Título lista (verde neón como text-area) === */
+.label.titulo-lista {
+    -fx-font-size: 18px;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-text-fill: #39ff14; /* Verde neón */
+    -fx-effect: dropshadow(gaussian, #000000, 3, 0.6, 1, 1);
+}
+
+/* === Botones estilo videojuego === */
+.boton-principal {
+    -fx-background-color: #00e5ff;
+    -fx-border-color: #00e5ff;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #0f0f0f;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, #00e5ff, 6, 0.6, 0, 0);
+    -fx-background-radius: 10px;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #1effff;
+    -fx-text-fill: #000000;
+    -fx-cursor: hand;
+}
+
+.boton-volver-menu {
+    -fx-background-color: #ff33cc;
+    -fx-border-color: #ff33cc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #0f0f0f;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, #ff33cc, 8, 0.7, 0, 0);
+    -fx-background-radius: 10px;
+}
+
+.boton-volver-menu:hover {
+    -fx-background-color: #ff66d9;
+    -fx-text-fill: #000000;
+    -fx-cursor: hand;
+}
+
+/* === TextArea actualizado === */
+.text-area {
+    -fx-control-inner-background: #000000;
+    -fx-background-color: #000000;
+    -fx-text-fill: #39ff14;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 15px;
+    -fx-border-color: #ff1744; /* Cambiado a rojo neón */
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(gaussian, #00ff00, 2, 0.4, 0, 0);
+}
+
+.text-area .content {
+    -fx-background-color: #000000;
+}
+
+.text-area .text {
+    -fx-fill: #39ff14;
+}
+
+.text-area .scroll-bar:vertical,
+.text-area .scroll-bar:horizontal {
+    -fx-background-color: #101010;
+}
+
+.text-area .thumb {
+    -fx-background-color: #39ff14;
+}
+
+/* === Labels secundarios (default) === */
+.label {
+    -fx-text-fill: #cccccc;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 14px;
+}
+
+/* === ListView === */
+.list-view {
+    -fx-background-color: #000000;
+    -fx-border-color: #39ff14;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-control-inner-background: #000000;
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, #00ff00, 2, 0.4, 0, 0);
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #39ff14;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:filled:selected,
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #1a1a1a;
+    -fx-text-fill: #00ffcc;
+}
+.titulo-vs {
+    -fx-text-fill: #ff6f00;
+    -fx-font-family: "Orbitron", "Arial Black", sans-serif;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+
+    /* Doble sombra para efecto glow más visible */
+    -fx-effect: dropshadow(gaussian, white, 1, 0.5, 0, 0),
+                 dropshadow(gaussian, #ff9100, 6, 0.6, 0, 0);
+}
+
+
+

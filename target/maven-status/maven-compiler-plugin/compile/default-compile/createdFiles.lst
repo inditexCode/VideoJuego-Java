@@ -2,6 +2,7 @@ com\lotr\modelo\Orco.class
 com\lotr\modelo\Hobbit.class
 com\lotr\ui\BatallaController.class
 com\lotr\ui\VentanaPrincipal.class
+com\lotr\ui\BatallaEjercitoController.class
 com\lotr\modelo\Elfo.class
 com\lotr\modelo\Bestia.class
 com\lotr\ui\BatallaVentana.class
