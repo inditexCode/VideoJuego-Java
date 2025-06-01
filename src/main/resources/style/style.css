@@ -1,0 +1,145 @@
+/* Etiquetas (Labels) */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-weight: bold;
+    -fx-text-fill: #39ff14; /* Verde neón */
+    -fx-effect: dropshadow(gaussian, #000000, 3, 0.5, 1, 1); /* Sombra para mejor visibilidad */
+}
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+   /* Antes: -fx-padding: 5 0 0 0; */
+    -fx-padding: 0;}
+
+/* Botones */
+.button {
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, #00e5ff, 5, 0.5, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #1effff;
+    -fx-cursor: hand;
+}
+/* Estilos para el boton que da comienzo al juego */
+#btn-empezar {
+    -fx-background-color: #ff6f00;  /* Naranja fuerte */
+    -fx-text-fill: white;
+    -fx-font-family: "Orbitron", "Arial Black";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12 30;
+    -fx-effect: dropshadow(gaussian, #ffab00, 6, 0.5, 0, 0);
+    -fx-border-color: #ffd54f;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+}
+
+#btn-empezar:hover {
+    -fx-background-color: #ffa000;
+    -fx-cursor: hand;
+}
+
+/* TextField y ComboBox 
+.text-field {
+    -fx-border-color: #6d4c41;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6; 
+}
+
+.combo-box-base {
+    -fx-border-color: #6d4c41;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6;
+}
+*/
+/* TextField  */
+.text-field {
+    -fx-background-color: #000000; /* Fondo negro */
+    -fx-text-fill: #ffffff;        /* Color del texto ingresado */
+    -fx-prompt-text-fill: #ff6f00; /* Color del placeholder */
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 14px;
+    -fx-border-color: #ff6f00;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8;
+}
+/* Estilos para los comboBox*/
+#combostyle {
+    -fx-background-color: #1a1a1a; /* Gris oscuro casi negro */
+    -fx-text-fill: #9cf1e4; /* Cian neón brillante */
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 14px;
+
+    -fx-border-color: #00ffc3;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+    -fx-prompt-text-fill: #ffaa00; /* Placeholder naranja para contraste */
+    -fx-padding: 8;
+}
+/* Elementos desplegados del ComboBox */
+.combo-box .list-cell {
+    -fx-text-fill: #66ffe7;  /* 💡 Texto más claro en el menú desplegable */
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 14px;
+    -fx-background-color: #1a1a1a;
+}
+
+/* Hover o selección */
+.combo-box .list-cell:hover,
+.combo-box .list-cell:selected {
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+}
+/* VBox contenedores, usa el selector de tipo */
+VBox {
+    -fx-border-color: #795548;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10;
+    -fx-background-color: #f3e5ab33;
+    -fx-spacing: 8px;
+}
+VBox#fondoVBox {
+    -fx-background-image: url("../images/señorA1.jpg");
+    -fx-background-size: cover;        /* O usa contain, stretch, etc. */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+
+    -fx-background-color: rgba(0, 0, 0, 0.9); /* Negro con 40% opacidad */
+    -fx-background-insets: 0;
+    -fx-background-blend-mode: overlay;
+}
+
+/* ImageView: igual, usar selector de tipo 
+ImageView {
+    -fx-border-color: #080808;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+*/
+#imgHeroe, #imgBestia {
+    -fx-border-color: #080808;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #000000;
+    -fx-padding: 5px;
+    
+    /* Estas propiedades no existen en CSS para JavaFX pero el fitHeight y fitWidth ya lo tenés en FXML */
+}
+

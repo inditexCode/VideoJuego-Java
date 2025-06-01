@@ -1,0 +1,209 @@
+
+/* Estilos generales de la ventana */
+.fondo-principal {
+    -fx-background-image: url("../images/SEÑORA2.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-padding: 15;
+     
+}
+.hbox-combate {
+    -fx-spacing: 10;
+    -fx-padding: 20;
+    -fx-alignment: center;
+    /*-fx-background-color: #2b2b2b;*/
+}
+
+.vbox-heroe, .vbox-bestia {
+   -fx-alignment: center-left;
+    -fx-spacing: 10;
+   /* -fx-background-color: #3a3f44;*/
+    -fx-padding: 10;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-min-width: 180;
+}
+
+.vbox-texto {
+    -fx-padding: 10;
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #aaaaaa;
+    -fx-border-width: 2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-min-width: 250;
+}
+
+/* Estilo para los labels de nombre, vida, armadura con neón videojuego */
+.label-videojuego {
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 12px;
+    -fx-text-fill: #39ff14; /* Verde neón */
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: #ff073a; /* Rojo neón */
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-padding: 4px 8px;
+    -fx-effect: dropshadow( gaussian , #ff073a, 10, 0.7 , 0 , 0 ); /* sombra roja neón */
+    -fx-background-color: black; /* fondo negro para resaltar */
+}
+
+/* Asegurarse que los Labels estén alineados a la izquierda dentro del VBox */
+.vbox-heroe > Label,
+.vbox-bestia > Label {
+    -fx-alignment: CENTER_LEFT;
+    -fx-max-width: 160;
+}
+
+/* TextArea con neón verde y fondo negro, y borde suave */
+.text-area {
+     -fx-font-size: 16px;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-weight: bold;
+    -fx-text-fill: #39ff14; /* Verde neón */
+    -fx-background-color: #000000;
+    -fx-border-color: #39ff14;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+    -fx-control-inner-background: black;
+    -fx-highlight-fill: #39ff14;
+    -fx-highlight-text-fill: black;
+    -fx-cursor: text;
+}
+
+.boton-atacar {
+    -fx-background-color: linear-gradient(#ff1e1e, #b20000); /* Rojo plasma */
+    -fx-text-fill: #ffffff; /* Blanco puro */
+    -fx-font-family: "Orbitron", "Consolas", "Arial Black";
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 14 32;
+    -fx-effect: dropshadow(gaussian, #ff4d4d, 8, 0.7, 0, 0);
+    -fx-border-color: #ffcccc;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+}
+
+.boton-atacar:hover {
+    -fx-background-color: linear-gradient(#ff4d4d, #d10000);
+    -fx-text-fill: #ffff66; /* Amarillo brillante */
+    -fx-cursor: hand;
+}
+
+
+.boton-empezar {
+    -fx-background-color: linear-gradient(#ff9900, #cc6600); /* Naranja fuerte */
+    -fx-text-fill: #02135f;  /* Azul muy oscuro */
+    -fx-font-family: "Orbitron", "Consolas", "Arial Black";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12 28;
+    -fx-effect: dropshadow(gaussian, #ffaa00, 6, 0.6, 0, 0);
+    -fx-border-color: #ffd54f;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+}
+
+.boton-empezar:hover {
+    -fx-background-color: linear-gradient(#ffb347, #e67300);
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.img {
+    -fx-fit-width: 100%;
+    -fx-fit-height: 100%;
+}
+
+
+
+
+/*
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="811.0" prefHeight="631.0" prefWidth="732.0" styleClass="fondo-principal" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lotr.ui.BatallaController">
+
+    <children>
+        <VBox id="fondoboxBatalla" layoutX="6.0" layoutY="12.0" maxWidth="696.0" prefHeight="542.0" prefWidth="690.0">
+
+            <!-- Parte superior: zona de combate -->
+            <HBox maxWidth="681.0" prefHeight="267.0" prefWidth="654.0" styleClass="hbox-combate" stylesheets="@style/estilosBatalla.css">
+                <children>
+                    <VBox alignment="CENTER_LEFT" minWidth="164.0" prefHeight="227.0" prefWidth="164.0" spacing="5.0" styleClass="vbox-heroe">
+                        <children>
+                            <ImageView fx:id="imgHeroe" fitHeight="90.0" fitWidth="159.0" preserveRatio="true" />
+                            <Label fx:id="lblNombreHeroe" styleClass="label-videojuego" text="Aragorn" />
+                            <Label fx:id="lblVidaHeroe" styleClass="label-videojuego" text="Vida 100" />
+                            <Label fx:id="lblArmaduraHeroe" styleClass="label-videojuego" text="Armadura" />
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="CENTER" maxWidth="222.0" minWidth="222.0" prefHeight="227.0" prefWidth="222.0" styleClass="vbox-texto">
+                        <children>
+                            <TextArea fx:id="txtBatallaInferior" maxWidth="200.0" prefHeight="180.0" prefWidth="204.0" styleClass="text-area" wrapText="true" />
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="CENTER" maxWidth="180.0" minWidth="149.0" prefHeight="227.0" prefWidth="149.0" spacing="5.0" styleClass="vbox-bestia">
+                        <children>
+                            <ImageView fx:id="imgBestia" fitHeight="90.0" fitWidth="159.0" preserveRatio="true" />
+                            <Label fx:id="lblNombreBestia" styleClass="label-videojuego" text="Trasgo" />
+                            <Label fx:id="lblVidaBestia" styleClass="label-videojuego" text="Vida 90" />
+                            <Label fx:id="lblArmaduraBestia" styleClass="label-videojuego" text="Armadura" />
+                        </children>
+                  <HBox.margin>
+                     <Insets right="20.0" />
+                  </HBox.margin>
+                    </VBox>
+                </children>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            </HBox>
+
+            <!-- Parte inferior: texto de batalla + botones -->
+            <VBox maxWidth="658.0" prefHeight="258.0" prefWidth="658.0" spacing="10.0" styleClass="seccion-inferior" stylesheets="@style/estilosBatalla.css">
+                <children>
+
+                    <!-- TextArea directamente sin ScrollPane -->
+                    <TextArea fx:id="txtBatallaInferior" editable="false" maxWidth="640.0" prefHeight="160.0" prefWidth="640.0" styleClass="text-area" stylesheets="@style/estilosBatalla.css" wrapText="true">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin></TextArea>
+
+                    <!-- Botones de acción -->
+                    <HBox alignment="CENTER_LEFT" spacing="15.0" stylesheets="@style/estilosBatalla.css">
+                        <children>
+                            <Button fx:id="btnAtacar" onAction="#onAtacar" styleClass="boton-atacar" stylesheets="@style/estilosBatalla.css" text="Atacar" />
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnReiniciar" onAction="#onReiniciar" styleClass="boton-empezar" text="Reiniciar" />
+                            <Button fx:id="btnVolver" onAction="#onVolver" styleClass="boton-empezar" text="Volver" />
+                        </children>
+                        <VBox.margin>
+                            <Insets left="10.0" right="10.0" />
+                        </VBox.margin>
+                    </HBox>
+                </children>
+            </VBox>
+
+        </VBox>
+    </children>
+</AnchorPane>*/

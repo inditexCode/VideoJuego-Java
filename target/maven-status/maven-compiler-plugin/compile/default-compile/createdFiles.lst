@@ -1,0 +1,17 @@
+com\lotr\modelo\Orco.class
+com\lotr\modelo\Hobbit.class
+com\lotr\ui\BatallaController.class
+com\lotr\ui\VentanaPrincipal.class
+com\lotr\modelo\Elfo.class
+com\lotr\modelo\Bestia.class
+com\lotr\ui\BatallaVentana.class
+com\lotr\modelo\Heroe.class
+com\lotr\ui\package-info.class
+com\lotr\logica\Batalla.class
+com\lotr\logica\Ejercito.class
+com\lotr\modelo\Trasgo.class
+com\lotr\ui\VentanaPrincipalController.class
+com\lotr\logica\package-info.class
+com\lotr\modelo\Humano.class
+com\lotr\modelo\package-info.class
+com\lotr\modelo\Personaje.class
