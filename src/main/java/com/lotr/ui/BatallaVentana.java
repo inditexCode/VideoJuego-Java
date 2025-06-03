@@ -11,9 +11,22 @@ import java.net.URL;
 import com.lotr.modelo.Bestia;
 import com.lotr.modelo.Heroe;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BatallaVentana.
+ */
 public class BatallaVentana {
 
-    // Nuevo método mostrar que recibe los personajes para pasar al controlador
+    /**
+     * Mostrar.
+     *
+     * @param stage the stage
+     * @param ancho the ancho
+     * @param alto the alto
+     * @param heroe the heroe
+     * @param bestia the bestia
+     */
+    // Método mostrar que recibe los personajes para pasar al controlador
     public static void mostrar(Stage stage, double ancho, double alto, Heroe heroe, Bestia bestia) {
         try {
             FXMLLoader loader = new FXMLLoader(BatallaVentana.class.getResource("/batalla.fxml"));

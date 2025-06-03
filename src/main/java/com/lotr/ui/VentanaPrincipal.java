@@ -8,8 +8,17 @@ import javafx.stage.Stage;
 
 import java.net.URL; // ← Agrega esto para usar URL
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class VentanaPrincipal.
+ */
 public class VentanaPrincipal extends Application {
 
+    /**
+     * Start.
+     *
+     * @param primaryStage the primary stage
+     */
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -37,6 +46,11 @@ public class VentanaPrincipal extends Application {
         }
     }
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }

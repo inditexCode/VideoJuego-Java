@@ -139,6 +139,39 @@
     -fx-effect: dropshadow(gaussian, white, 1, 0.5, 0, 0),
                  dropshadow(gaussian, #ff9100, 6, 0.6, 0, 0);
 }
+.dialog-pane {
+    -fx-background-color: #2b2b2b;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #00e5ff;
+    -fx-text-fill: #0f0f0f;
+    -fx-font-family: "Consolas", "Monospaced";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, #00e5ff, 6, 0.6, 0, 0);
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #1effff;
+    -fx-text-fill: #000000;
+    -fx-cursor: hand;
+}
+
+
+
 
 
 

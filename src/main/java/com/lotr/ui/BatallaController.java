@@ -16,57 +16,102 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BatallaController.
+ */
 public class BatallaController {
 
+    /** The img bestia. */
     @FXML
     private ImageView imgBestia;
 
+    /** The img heroe. */
     @FXML
     private ImageView imgHeroe;
 
+    /** The lbl armadura bestia. */
     @FXML
     private Label lblArmaduraBestia;
 
+    /** The lbl armadura heroe. */
     @FXML
     private Label lblArmaduraHeroe;
 
+    /** The lbl nombre bestia. */
     @FXML
     private Label lblNombreBestia;
 
+    /** The lbl nombre heroe. */
     @FXML
     private Label lblNombreHeroe;
 
+    /** The lbl vida bestia. */
     @FXML
     private Label lblVidaBestia;
 
+    /** The lbl vida heroe. */
     @FXML
     private Label lblVidaHeroe;
 
+    /** The txt batalla inferior. */
     @FXML
     private TextArea txtBatallaInferior;
 
+    /** The btn atacar. */
     @FXML
     private Button btnAtacar;
 
+    /** The btn reiniciar. */
     @FXML
     private Button btnReiniciar;
 
+    /** The btn volver. */
     @FXML
     private Button btnVolver;
 
+    /** The nombre heroe. */
     private String nombreHeroe;
+    
+    /** The vida heroe. */
     private int vidaHeroe;
+    
+    /** The armadura heroe. */
     private int armaduraHeroe;
+    
+    /** The imagen heroe. */
     private Image imagenHeroe;
 
+    /** The nombre bestia. */
     private String nombreBestia;
+    
+    /** The vida bestia. */
     private int vidaBestia;
+    
+    /** The armadura bestia. */
     private int armaduraBestia;
+    
+    /** The imagen bestia. */
     private Image imagenBestia;
 
+    /** The heroe obj. */
     private Personaje heroeObj;
+    
+    /** The bestia obj. */
     private Personaje bestiaObj;
 
+    /**
+     * Sets the datos batalla.
+     *
+     * @param nombreHeroe the nombre heroe
+     * @param vidaHeroe the vida heroe
+     * @param armaduraHeroe the armadura heroe
+     * @param imagenHeroe the imagen heroe
+     * @param nombreBestia the nombre bestia
+     * @param vidaBestia the vida bestia
+     * @param armaduraBestia the armadura bestia
+     * @param imagenBestia the imagen bestia
+     */
     public void setDatosBatalla(String nombreHeroe, int vidaHeroe, int armaduraHeroe, Image imagenHeroe,
                                  String nombreBestia, int vidaBestia, int armaduraBestia, Image imagenBestia) {
         this.nombreHeroe = nombreHeroe;
@@ -79,7 +124,7 @@ public class BatallaController {
         this.armaduraBestia = armaduraBestia;
         this.imagenBestia = imagenBestia;
 
-        // Crear instancias reales de personajes
+        // Creo instancias reales de personajes
         if (nombreHeroe.toLowerCase().contains("legolas") || nombreHeroe.toLowerCase().contains("elfo")) {
             heroeObj = new Elfo(nombreHeroe, vidaHeroe, armaduraHeroe);
         } else if (nombreHeroe.toLowerCase().contains("frodo") || nombreHeroe.toLowerCase().contains("hobbit")) {
@@ -100,6 +145,9 @@ public class BatallaController {
         actualizarVista();
     }
 
+    /**
+     * Actualizar vista.
+     */
     private void actualizarVista() {
         lblNombreHeroe.setText(nombreHeroe);
         lblVidaHeroe.setText("Vida: " + vidaHeroe);
@@ -115,11 +163,19 @@ public class BatallaController {
         btnAtacar.setDisable(false);
     }
 
+    /**
+     * Actualizar vida.
+     */
     private void actualizarVida() {
         lblVidaHeroe.setText("Vida: " + heroeObj.getVida());
         lblVidaBestia.setText("Vida: " + bestiaObj.getVida());
     }
 
+    /**
+     * On atacar.
+     *
+     * @param event the event
+     */
     @FXML
     void onAtacar(ActionEvent event) {
         if (!heroeObj.estaVivo() || !bestiaObj.estaVivo()) {
@@ -160,6 +216,11 @@ public class BatallaController {
         actualizarVida();
     }
 
+    /**
+     * On reiniciar.
+     *
+     * @param event the event
+     */
     @FXML
     void onReiniciar(ActionEvent event) {
         setDatosBatalla(nombreHeroe, vidaHeroe, armaduraHeroe, imagenHeroe,
@@ -167,6 +228,11 @@ public class BatallaController {
         txtBatallaInferior.setText("🔄 ¡Batalla reiniciada!");
     }
 
+    /**
+     * On volver.
+     *
+     * @param event the event
+     */
     @FXML
     void onVolver(ActionEvent event) {
         try {
@@ -180,8 +246,11 @@ public class BatallaController {
         }
     }
 
+    /**
+     * Initialize.
+     */
     @FXML
     public void initialize() {
-        // Esperamos los datos desde setDatosBatalla
+        
     }
 }

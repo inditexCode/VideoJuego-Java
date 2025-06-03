@@ -10,60 +10,94 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="540.0" prefHeight="540.0" prefWidth="660.0" styleClass="fondo-principal" stylesheets="@style/estilosBatalla.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lotr.ui.BatallaController">
+<AnchorPane maxHeight="540.0" prefHeight="537.0"
+	prefWidth="722.0" styleClass="fondo-principal"
+	stylesheets="@style/estilosBatalla.css"
+	xmlns="http://javafx.com/javafx/23.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="com.lotr.ui.BatallaController">
 
-    <children>
-        <VBox id="fondoboxBatalla" alignment="TOP_CENTER" maxHeight="500.0" maxWidth="640.0" prefHeight="500.0" prefWidth="640.0" spacing="10.0" stylesheets="@style/estilosBatalla.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+	<children>
+		<VBox id="fondoboxBatalla" alignment="TOP_CENTER"
+			layoutX="10.399999999999999" layoutY="9.6" maxHeight="600.0"
+			maxWidth="713.0" prefHeight="600.0" prefWidth="713.0" spacing="10.0"
+			stylesheets="@style/estilosBatalla.css" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="14.0"
+			AnchorPane.topAnchor="-6.0">
 
-            <!-- Parte superior: zona de combate -->
-            <HBox maxWidth="620.0" prefHeight="240.0" spacing="10.0" styleClass="hbox-combate">
+			<!-- Parte superior: zona de combate -->
+			<HBox maxWidth="620.0" prefHeight="240.0" spacing="10.0"
+				styleClass="hbox-combate">
 
-                <children>
-                    <VBox alignment="CENTER_LEFT" prefWidth="180.0" spacing="5.0" styleClass="vbox-heroe">
-                        <children>
-<ImageView fx:id="imgHeroe" preserveRatio="true" styleClass="img" VBox.vgrow="ALWAYS" />                            <Label fx:id="lblNombreHeroe" styleClass="label-videojuego" text="Aragorn" />
-                            <Label fx:id="lblVidaHeroe" styleClass="label-videojuego" text="Vida 100" />
-                            <Label fx:id="lblArmaduraHeroe" styleClass="label-videojuego" text="Armadura" />
-                        </children>
-                    </VBox>
+				<children>
+					<VBox alignment="CENTER_LEFT" prefWidth="180.0" spacing="5.0"
+						styleClass="vbox-heroe">
+						<children>
+							<ImageView fx:id="imgHeroe" fitHeight="50.0"
+								fitWidth="152.0" preserveRatio="true" styleClass="img"
+								VBox.vgrow="ALWAYS" />
+							<Label fx:id="lblNombreHeroe" styleClass="label-videojuego"
+								text="Aragorn" />
+							<Label fx:id="lblVidaHeroe" styleClass="label-videojuego"
+								text="Vida 100" />
+							<Label fx:id="lblArmaduraHeroe"
+								styleClass="label-videojuego" text="Armadura" />
+						</children>
+					</VBox>
 
-                    <VBox alignment="CENTER" prefWidth="240.0" styleClass="vbox-texto">
-                        <children>
-                            <TextArea fx:id="txtBatalla" prefHeight="180.0" prefWidth="220.0" styleClass="text-area" wrapText="true" />
-                        </children>
-                    </VBox>
+					<VBox alignment="CENTER" prefWidth="240.0"
+						styleClass="vbox-texto">
+						<children>
+							<TextArea fx:id="txtBatalla" prefHeight="180.0"
+								prefWidth="220.0" styleClass="text-area" wrapText="true" />
+						</children>
+					</VBox>
 
-                    <VBox alignment="CENTER" prefHeight="227.0" prefWidth="189.0" spacing="5.0" styleClass="vbox-bestia">
-                        <children>
-<ImageView fx:id="imgBestia" preserveRatio="true" styleClass="img" VBox.vgrow="ALWAYS" />                            <Label fx:id="lblNombreBestia" styleClass="label-videojuego" text="Trasgo" />
-                            <Label fx:id="lblVidaBestia" styleClass="label-videojuego" text="Vida 90" />
-                            <Label fx:id="lblArmaduraBestia" styleClass="label-videojuego" text="Armadura" />
-                        </children>
-                    </VBox>
-                </children>
-            </HBox>
+					<VBox alignment="CENTER" prefHeight="227.0" prefWidth="189.0"
+						spacing="5.0" styleClass="vbox-bestia">
+						<children>
+							<ImageView fx:id="imgBestia" fitHeight="57.0"
+								fitWidth="155.0" preserveRatio="true" styleClass="img"
+								VBox.vgrow="ALWAYS" />
+							<Label fx:id="lblNombreBestia"
+								styleClass="label-videojuego" text="Trasgo" />
+							<Label fx:id="lblVidaBestia" styleClass="label-videojuego"
+								text="Vida 90" />
+							<Label fx:id="lblArmaduraBestia"
+								styleClass="label-videojuego" text="Armadura" />
+						</children>
+					</VBox>
+				</children>
+			</HBox>
 
-            <!-- Parte inferior: texto de batalla + botones -->
-            <VBox prefWidth="620.0" spacing="10.0" styleClass="seccion-inferior">
+			<!-- Parte inferior: texto de batalla + botones -->
+			<VBox prefWidth="620.0" spacing="10.0"
+				styleClass="seccion-inferior">
 
-                <children>
-                    <!-- TextArea directamente sin ScrollPane -->
-                    <TextArea fx:id="txtBatallaInferior" editable="false" maxHeight="250.0" prefHeight="250.0" prefWidth="661.0" styleClass="text-area" stylesheets="@style/estilosBatalla.css" wrapText="true" />
+				<children>
+					<!-- TextArea directamente sin ScrollPane -->
+					<TextArea fx:id="txtBatallaInferior" editable="false"
+						maxHeight="250.0" prefHeight="190.0" prefWidth="682.0"
+						styleClass="text-area" stylesheets="@style/estilosBatalla.css"
+						wrapText="true" />
 
-                    <!-- Botones de acción -->
-                    <HBox alignment="CENTER_LEFT" spacing="15.0">
-                        <children>
-                            <Button fx:id="btnAtacar" onAction="#onAtacar" styleClass="boton-atacar" text="Atacar" />
-                            <Region HBox.hgrow="ALWAYS" />
-                            <Button fx:id="btnReiniciar" onAction="#onReiniciar" styleClass="boton-empezar" text="🔄 Reiniciar" />
-                            <Button fx:id="btnVolver" onAction="#onVolver" styleClass="boton-empezar" text="🔙 Volver" />
-                        </children>
-                        <VBox.margin>
-                            <Insets left="10.0" right="10.0" />
-                        </VBox.margin>
-                    </HBox>
-                </children>
-            </VBox>
-        </VBox>
-    </children>
+					<!-- Botones de acción -->
+					<HBox alignment="CENTER_LEFT" spacing="15.0">
+						<children>
+							<Button fx:id="btnAtacar" onAction="#onAtacar"
+								styleClass="boton-atacar" text="Atacar" />
+							<Region HBox.hgrow="ALWAYS" />
+							<Button fx:id="btnReiniciar" onAction="#onReiniciar"
+								styleClass="boton-empezar" text="🔄 Reiniciar" />
+							<Button fx:id="btnVolver" onAction="#onVolver"
+								styleClass="boton-empezar" text="🔙 Volver" />
+						</children>
+						<VBox.margin>
+							<Insets left="10.0" right="10.0" />
+						</VBox.margin>
+					</HBox>
+				</children>
+			</VBox>
+		</VBox>
+	</children>
 </AnchorPane>

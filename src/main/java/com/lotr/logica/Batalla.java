@@ -2,16 +2,32 @@ package com.lotr.logica;
 
 import com.lotr.modelo.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Batalla.
+ */
 public class Batalla {
 
+    /** The heroes. */
     private Ejercito heroes;
+    
+    /** The bestias. */
     private Ejercito bestias;
 
+    /**
+     * Instantiates a new batalla.
+     *
+     * @param heroes the heroes
+     * @param bestias the bestias
+     */
     public Batalla(Ejercito heroes, Ejercito bestias) {
         this.heroes = heroes;
         this.bestias = bestias;
     }
 
+    /**
+     * Iniciar batalla.
+     */
     public void iniciarBatalla() {
         int turno = 1;
 

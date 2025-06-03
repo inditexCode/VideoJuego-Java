@@ -24,82 +24,115 @@ import javafx.util.Duration;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class VentanaPrincipalController.
+ */
 public class VentanaPrincipalController {
 
+    /** The V box. */
     @FXML
     private VBox VBox;
 
+    /** The anchor pane. */
     @FXML
     private AnchorPane anchorPane;
 
+    /** The btn agregar bestia. */
     @FXML
     private Button btnAgregarBestia;
 
+    /** The btn agregar heroe. */
     @FXML
     private Button btnAgregarHeroe;
 
+    /** The btn empezar lucha. */
     @FXML
     private Button btnEmpezarLucha;
 
+    /** The combo tipo bestia. */
     @FXML
     private ComboBox<String> comboTipoBestia;
 
+    /** The combo tipo heroe. */
     @FXML
     private ComboBox<String> comboTipoHeroe;
     
+    /** The btn ejercito. */
     @FXML
     private Button btnEjercito;
 
+    /** The image view bestia. */
     @FXML
     private ImageView imageViewBestia;
 
+    /** The image view heroe. */
     @FXML
     private ImageView imageViewHeroe;
 
+    /** The txt armadura bestia. */
     @FXML
     private TextField txtArmaduraBestia;
 
+    /** The txt armadura heroe. */
     @FXML
     private TextField txtArmaduraHeroe;
 
+    /** The txt nombre bestia. */
     @FXML
     private TextField txtNombreBestia;
 
+    /** The txt nombre heroe. */
     @FXML
     private TextField txtNombreHeroe;
 
+    /** The txt vida bestia. */
     @FXML
     private TextField txtVidaBestia;
 
+    /** The txt vida heroe. */
     @FXML
     private TextField txtVidaHeroe;
     
+    /** The lbl error heroe. */
     @FXML
    private Label lblErrorHeroe;
 
+    /** The lbl error bestia. */
     @FXML
     private Label lblErrorBestia;
 
+    /** The lbl error vida heroe. */
     // Labels de errores individuales para validar campo por campo
     @FXML
     private Label lblErrorVidaHeroe;
 
+    /** The lbl error armadura heroe. */
     @FXML
     private Label lblErrorArmaduraHeroe;
 
+    /** The lbl error vida bestia. */
     @FXML
     private Label lblErrorVidaBestia;
 
+    /** The lbl error armadura bestia. */
     @FXML
     private Label lblErrorArmaduraBestia;
 
+    /** The btnrefrescar. */
     @FXML
     private Button btnrefrescar;
 
+    /** The ejercito heroes. */
     // Ejércitos
     private final Ejercito ejercitoHeroes = new Ejercito("Héroes");
+    
+    /** The ejercito bestias. */
     private final Ejercito ejercitoBestias = new Ejercito("Bestias");
 
+    /**
+     * Initialize.
+     */
     @FXML
     public void initialize() {
         comboTipoHeroe.getItems().addAll("Elfo", "Humano", "Hobbit");
@@ -115,6 +148,12 @@ public class VentanaPrincipalController {
         btnEmpezarLucha.setDisable(true); // Desactivo el boton para que el usuario no pueda pasar de interfaz sin completar los datos
     }
 
+    /**
+     * Es entero.
+     *
+     * @param texto the texto
+     * @return true, if successful
+     */
     private boolean esEntero(String texto) {
         if (texto == null || texto.trim().isEmpty()) {
             return false;
@@ -127,11 +166,19 @@ public class VentanaPrincipalController {
         }
     }
 
+    /**
+     * Verificar estado boton lucha.
+     */
     private void verificarEstadoBotonLucha() {
         boolean habilitar = !ejercitoHeroes.estaVacio() && !ejercitoBestias.estaVacio();
         btnEmpezarLucha.setDisable(!habilitar);
     }
 
+    /**
+     * On agregar heroe.
+     *
+     * @param event the event
+     */
     @FXML
     void onAgregarHeroe(ActionEvent event) {
         String tipo = comboTipoHeroe.getValue();
@@ -197,6 +244,11 @@ public class VentanaPrincipalController {
         }
     }
 
+    /**
+     * On agregar bestia.
+     *
+     * @param event the event
+     */
     @FXML
     void onAgregarBestia(ActionEvent event) {
         String tipo = comboTipoBestia.getValue();
@@ -266,6 +318,11 @@ public class VentanaPrincipalController {
         }
     }
 
+    /**
+     * On empezar lucha.
+     *
+     * @param event the event
+     */
     @FXML
     void onEmpezarLucha(ActionEvent event) {
         try {
@@ -308,18 +365,31 @@ public class VentanaPrincipalController {
 
 
 
+    /**
+     * Cargar imagen heroe.
+     *
+     * @param tipo the tipo
+     */
     private void cargarImagenHeroe(String tipo) {
         String ruta = "/images/" + tipo.toLowerCase() + ".jpg";
         Image imagen = new Image(getClass().getResourceAsStream(ruta));
         imageViewHeroe.setImage(imagen);
     }
 
+    /**
+     * Cargar imagen bestia.
+     *
+     * @param tipo the tipo
+     */
     private void cargarImagenBestia(String tipo) {
         String ruta = "/images/" + tipo.toLowerCase() + ".jpg";
         Image imagen = new Image(getClass().getResourceAsStream(ruta));
         imageViewBestia.setImage(imagen);
     }
 
+    /**
+     * Limpiar campos heroe.
+     */
     private void limpiarCamposHeroe() {
         txtNombreHeroe.clear();
         txtVidaHeroe.clear();
@@ -333,6 +403,9 @@ public class VentanaPrincipalController {
 
     }
 
+    /**
+     * Limpiar campos bestia.
+     */
     private void limpiarCamposBestia() {
         txtNombreBestia.clear();
         txtVidaBestia.clear();
@@ -345,6 +418,12 @@ public class VentanaPrincipalController {
         lblErrorArmaduraBestia.setManaged(false);
 
     }
+    
+    /**
+     * Onrefrescar.
+     *
+     * @param event the event
+     */
     @FXML
     void onrefrescar(ActionEvent event) {
         try {
@@ -358,6 +437,11 @@ public class VentanaPrincipalController {
         }
     }
 
+    /**
+     * Oncambio interfaz.
+     *
+     * @param event the event
+     */
     @FXML
     void OncambioInterfaz(ActionEvent event) {
         try {

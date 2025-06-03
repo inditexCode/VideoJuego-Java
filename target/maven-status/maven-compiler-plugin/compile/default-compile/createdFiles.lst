@@ -8,7 +8,9 @@ com\lotr\modelo\Bestia.class
 com\lotr\ui\BatallaVentana.class
 com\lotr\modelo\Heroe.class
 com\lotr\ui\package-info.class
+console\package-info.class
 com\lotr\logica\Batalla.class
+console\BatallaEjercitosConsola.class
 com\lotr\logica\Ejercito.class
 com\lotr\modelo\Trasgo.class
 com\lotr\ui\VentanaPrincipalController.class

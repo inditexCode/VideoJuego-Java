@@ -7,9 +7,6 @@ public class Orco extends Bestia {
 
     @Override
     protected int ajustarAtaque(int potencia, Personaje enemigo) {
-        // Reduce la armadura del oponente un 10% (solo este turno)
-        int armaduraReducida = (int) (enemigo.getArmadura() * 0.9);
-        int dano = potencia - armaduraReducida;
-        return Math.max(dano, 0);
+        return potencia; // Ya se descuenta armadura en recibirDanio()
     }
 }
